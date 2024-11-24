@@ -1,7 +1,7 @@
 let zoomIn = document.getElementById('mainImage');
 
 //This code will zoom into the img when hover
-zoomIn.addEventListener('mousemove', (event) =>{
+zoomIn.addEventListener('mousemove', (event) =>{z
     zoomIn.style.setProperty('--display', 'block');
     let pointer = {
         x: (event.offsetX * 100) / zoomIn.offsetWidth,

@@ -33,17 +33,23 @@
     display: flex;
     align-items: center;
 }
+.menu{
+    display: none;
+    margin: 0.75em;
+}
+.menu:hover{
+    cursor: pointer;
+    fill: var(--Orange);
+}
 .homeLogo{
     margin-right: 3em;
 }
-.menu{
+.navList{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--Dark-grayish-blue);
-    
-    
+    color: var(--Dark-grayish-blue);    
 }
 .righties{
     display: inherit;
@@ -187,7 +193,7 @@ button{
 }
 button:hover{
     cursor: pointer;
-    opacity: 0.8;
+    background-color: var(--Pale-orange);
     box-shadow: 0 0 5px 2px #d4d4d4;
 }
 .grandImage{
@@ -197,7 +203,7 @@ button:hover{
     width: 55vh;
     overflow: hidden;
 
-    --url: url(./images/image-product-1.jpg);
+    --url: url('./images/image-product-1.jpg');
     --zoom-x: 0%;--zoom-y: 0%;
     --display: none;
 }
@@ -227,7 +233,7 @@ button:hover{
 .imageThumbnail{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .imageThumbnail  img{
     width: 12vh;
@@ -240,6 +246,10 @@ button:hover{
     border: 0.15em solid var(--Orange);
     opacity: 0.5;
     cursor: pointer;
+}
+.imageThumbnail img:focus{
+    border: 0.15em solid var(--Orange);
+    opacity: 0.5;
 }
 .D-flex{
     display: flex;
@@ -255,6 +265,9 @@ button:hover{
         height: 100%;
     }
     .menu{
+        display: block;
+    }
+    .navList{
         justify-content: flex-end;
     }
     .righties{
@@ -275,6 +288,9 @@ button:hover{
         flex-direction: column;
     }
     .productImagePanel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     .productInfoPanel{
