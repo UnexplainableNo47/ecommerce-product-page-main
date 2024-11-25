@@ -200,7 +200,7 @@ button:hover{
     position: sticky;
     border-radius: 0.5em;
     height: 55vh;
-    width: 55vh;
+    width: min(55vh, 100%);
     overflow: hidden;
 
     --url: url('./images/image-product-1.jpg');
@@ -251,6 +251,10 @@ button:hover{
     border: 0.15em solid var(--Orange);
     opacity: 0.5;
 }
+.form{
+    display: flex;
+    gap: 1em;
+}
 .D-flex{
     display: flex;
 }
@@ -284,6 +288,9 @@ button:hover{
         align-items: flex-start;
         
     } 
+    hr{
+        margin-bottom: 0;
+    }
     .content{
         flex-direction: column;
     }
@@ -292,8 +299,19 @@ button:hover{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-bottom: 1.5em;
+    }
+    .grandImage{
+        border-radius: 0;
+        flex-shrink: 1;
+    }
+    .imageThumbnail{
+        display: none;
     }
     .productInfoPanel{
         width: 100%;
+    }
+    .form{
+        flex-direction: column;
     }
 }
