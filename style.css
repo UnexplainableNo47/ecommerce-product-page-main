@@ -318,6 +318,9 @@ button:hover {
   .container {
     height: 100%;
   }
+  .navBar {
+    height: 10vh;
+  }
   .menu {
     display: block;
   }
@@ -354,12 +357,15 @@ button:hover {
   .grandImage {
     border-radius: 0;
     flex-shrink: 1;
+    width: 100vw;
+    height: 55vh;
   }
   .imageThumbnail {
     display: none;
   }
   .productInfoPanel {
     width: 100%;
+    margin: auto;
   }
   .form {
     flex-direction: column;
