@@ -327,6 +327,9 @@ button:hover {
     display: flex;
     justify-content: right;
   }
+  .menu {
+    display: block;
+  }
   .righties {
     position: fixed;
     display: none;
@@ -336,20 +339,6 @@ button:hover {
     top: 0;
     left: 0;
     z-index: 9999;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .container {
-    height: 100%;
-  }
-  .navBar {
-    height: 10vh;
-  }
-  .menu {
-    display: block;
-  }
-  .navList {
-    justify-content: flex-end;
   }
   .list {
     align-items: flex-start;
@@ -388,6 +377,20 @@ button:hover {
     width: 30vw;
     height: 10vh;
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 100%;
+  }
+  .navBar {
+    height: 10vh;
+  }
+  .menu {
+    display: block;
+  }
+  .navList {
+    justify-content: flex-end;
   }
   .close + img + svg path:hover {
     fill: var(--Orange);

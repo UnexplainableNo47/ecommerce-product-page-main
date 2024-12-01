@@ -276,6 +276,9 @@ button:hover{
         display: flex;
         justify-content: right;
     }
+    .menu{
+        display: block;
+    }
     .righties{
         position: fixed;
         display: none;
@@ -286,21 +289,7 @@ button:hover{
         left: 0;
         z-index: 9999;
     }  
-}
-@media only screen and (max-width:600px){
-    .container{
-        height: 100%;
-    }
-    .navBar{
-        height: 10vh;
-    }
-    .menu{
-        display: block;
-    }
-    .navList{
-        justify-content: flex-end;
-    }
-    .list{
+        .list{
         align-items: flex-start;
         flex-direction: column;
         position: fixed;
@@ -338,6 +327,21 @@ button:hover{
         height: 10vh;
         opacity: 1;
     }
+}
+@media only screen and (max-width:600px){
+    .container{
+        height: 100%;
+    }
+    .navBar{
+        height: 10vh;
+    }
+    .menu{
+        display: block;
+    }
+    .navList{
+        justify-content: flex-end;
+    }
+
     .close + img + svg path:hover{
         fill: var(--Orange);
     }
