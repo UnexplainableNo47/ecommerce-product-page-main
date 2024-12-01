@@ -1,4 +1,15 @@
 let zoomIn = document.getElementById('mainImage');
+let menuOpen = document.getElementById('MenuOpen');
+let SideBar = document.getElementById('sideBar');
+let close = document.getElementById('close');
+
+//THIS CODE WILL DISPLAY THE SIDE NAVBAR ON CLICK
+menuOpen.addEventListener('click', (e) => {
+    sideBar.style.display = 'flex';
+})
+close.addEventListener('click', (e) => {
+    sideBar.style.display = 'none';
+})
 
 //This code will zoom into the img when hover
 zoomIn.addEventListener('mousemove', (event) =>{z

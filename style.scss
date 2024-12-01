@@ -51,25 +51,31 @@
     justify-content: space-between;
     color: var(--Dark-grayish-blue);    
 }
-.righties{
+.list{
     display: inherit;
     gap: 1.5em;
 }
-.righties div{
+.list div{
+    display: flex;
     width: auto;
     cursor: pointer;
     height: 2em;
     text-align: center;
     transition: 0.2s ease-in-out;
+    align-items: center;
 }
-.righties h4{
+.close{
+    opacity: 0;
+}
+.list h4{
+    align-items: center;
     font-size: 0.8em;
     font-weight: 450;
     padding: 0.5em;
 }
-.righties div:hover{
-    color: var(--Very-dark-blue);
-    border-bottom: 1px solid var(--Orange);
+.list div:has(h4):hover{
+    color: var(--Orange);
+    background-color: var(--Pale-orange);
 }
 .lefties{
     gap: 1.8em;
@@ -253,6 +259,7 @@ button:hover{
 }
 .form{
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
 }
 .D-flex{
@@ -264,7 +271,23 @@ button:hover{
 .g-1{
     gap: 1em;
 }
-@media only screen and (max-width:800px){
+@media only screen and (max-width:760px){
+    .navList{
+        display: flex;
+        justify-content: right;
+    }
+    .righties{
+        position: fixed;
+        display: none;
+        background-color: var(--Black-background);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }  
+}
+@media only screen and (max-width:600px){
     .container{
         height: 100%;
     }
@@ -277,20 +300,47 @@ button:hover{
     .navList{
         justify-content: flex-end;
     }
-    .righties{
-        display: none;
+    .list{
+        align-items: flex-start;
         flex-direction: column;
         position: fixed;
-        width: 50vw;height: 10vh;
+        width: 50vw;height: 100%;
+        top: 0;
         left: 0;
         background-color: var(--White);
         z-index: 99;
-        padding:  2em 0 2em 0;
-        border-radius: 0.5em;
+        padding:  0.5rem;
+     
         box-shadow: 0 0 5px 2px #dadada;
-        align-items: flex-start;
-        
-    } 
+        padding-left: 1em;
+    }    
+    .righties{
+        position: fixed;
+        display: none;
+        background-color: var(--Black-background);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    .list div{
+        width: 100%;
+        text-align: left;
+    }
+    .list div:has(h4):hover{
+        border-radius: 0.5rem;
+        background-color: var(--Pale-orange);
+    }
+    .close{
+        display: block;
+        width: 30vw;
+        height: 10vh;
+        opacity: 1;
+    }
+    .close + img + svg path:hover{
+        fill: var(--Orange);
+    }
     hr{
         margin-bottom: 0;
     }
@@ -317,7 +367,21 @@ button:hover{
         width: 100%;
         margin: auto;
     }
+    #decrease{
+        width: 20vw;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+    #quantity{
+        width: 100%;
+    }
+    #increase{
+        width: 20vw;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
     .form{
         flex-direction: column;
+    }
+    button{
+        width: 90%;
     }
 }
