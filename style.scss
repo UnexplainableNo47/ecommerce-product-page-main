@@ -51,8 +51,11 @@
     justify-content: space-between;
     color: var(--Dark-grayish-blue);    
 }
+.righties{
+    display: block;
+}
 .list{
-    display: inherit;
+    display:flex;
     gap: 1.5em;
 }
 .list div{
@@ -101,6 +104,21 @@
     cursor: pointer;
     background-color: var(--Orange);
 }
+#cart-summary-close{
+    fill: var(--Orange);
+    display: none;
+}
+.cart-summary{
+    position: absolute;
+    top:10%;
+    right:13%;
+    background-color: var(--White);
+    width: 30vh;
+    height: 20vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px 2px #dadada;
+    display: none;
+}
 hr{
     margin-bottom: 2em;
     height: 0.1px;
@@ -134,16 +152,21 @@ p{
     width: 400px;
     margin-left: 2em;
 }
+.priceDiscount{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
 .price{
     color: var(--Very-dark-blue);
     font-size: 1.5rem;
     font-weight: 600;
-    height: 0.1rem;
 }
 .discount{
+    height: min-content;
     padding: 0.2em 0.3em 0.2em 0.3em;
     text-align: center;
-    font-size: smaller;
+    font-size: 0.65rem;
     border-radius: 0.2rem;
     color: var(--White);
     background-color: var(--Very-dark-blue);
@@ -200,7 +223,7 @@ button{
 button:hover{
     cursor: pointer;
     background-color: var(--Pale-orange);
-    box-shadow: 0 0 5px 2px #d4d4d4;
+    box-shadow: 0 0 5px 0px #d4d4d4;
 }
 .grandImage{
     position: sticky;
@@ -387,5 +410,10 @@ button:hover{
     }
     button{
         width: 90%;
+    }
+    .cart-summary{
+        right: 5%;
+        width: 90%;
+        height: 40vh;
     }
 }

@@ -1,13 +1,36 @@
 let zoomIn = document.getElementById('mainImage');
 let menuOpen = document.getElementById('MenuOpen');
 let SideBar = document.getElementById('sideBar');
-let close = document.getElementById('close');
+let closer = document.getElementById('close');
+let Cart = document.getElementById('cart')
+let cart_summary = document.getElementById('cart-summary')
+let cart_close = document.getElementById('cart-summary-close')
+
+//THIS CODE WILL DISPLAY THE CART SUMMARY ON CLICK
+Cart.addEventListener('click', (e) =>{
+
+    if (cart_summary.style.display = 'none') {
+        cart_summary.style.display = 'block';
+        cart.style.display = 'none';
+        cart_close.style.display = 'block'
+    }
+})
+
+//THIS CODE WILL NOT DISPLAY THE CART SUMMARY ON CLICK
+cart_close.addEventListener('click', (e) =>{
+
+    if (cart_summary.style.display = 'block') {
+        cart_summary.style.display = 'none';
+        cart.style.display = 'block';
+        cart_close.style.display = 'none'
+    }
+})
 
 //THIS CODE WILL DISPLAY THE SIDE NAVBAR ON CLICK
 menuOpen.addEventListener('click', (e) => {
     sideBar.style.display = 'flex';
 })
-close.addEventListener('click', (e) => {
+closer.addEventListener('click', (e) => {
     sideBar.style.display = 'none';
 })
 
